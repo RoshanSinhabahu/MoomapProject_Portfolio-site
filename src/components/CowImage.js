@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import cowCover from '../assets/cowCover2.png';
 
 function ImageSection() {
   useEffect(() => {

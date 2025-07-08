@@ -63,6 +63,7 @@ h1, h2, h3, h4, h5, h6 , p, a{
   background-image: url('./assets/cowCover2.png');
   background-size: cover;
   background-position: center 0;
+  top : -20;
   background-repeat: no-repeat;
 }
 
@@ -94,7 +95,7 @@ h1, h2, h3, h4, h5, h6 , p, a{
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.0);
   z-index: 1;
 }
 
