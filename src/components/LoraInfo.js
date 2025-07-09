@@ -1,7 +1,7 @@
 // LoraInfo.js
 function LoraInfo() {
   return (
-    <div className="col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+    <div className="col-md-6 text-center" data-aos="fade-left" data-aos-delay="300">
       <h2 className="mb-4">What is LoRa?</h2>
       <i className="fas fa-broadcast-tower fa-4x mb-5 text-primary"></i>
       <p>
