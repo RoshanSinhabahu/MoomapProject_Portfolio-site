@@ -2,16 +2,14 @@
   text-align: center;
 }
 
-body {
+body, html {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 section {
   scroll-margin-top: 56px;
-}
-
-h1, h2, h3, h4, h5, h6 , p, a{
-  font-family: 'Poppins', sans-serif;
 }
 
 .navbar-transparent {
@@ -25,10 +23,12 @@ h1, h2, h3, h4, h5, h6 , p, a{
 }
 
 .navbar-white {
+  background-color: rgba(255, 255, 255, 0.925);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar .container-fluid{
+.navbar .container-fluid {
   padding-left: 40px;
   padding-right: 20px;
 }
@@ -36,11 +36,6 @@ h1, h2, h3, h4, h5, h6 , p, a{
 .navbar-transparent .nav-link,
 .navbar-transparent .navbar-brand {
   color: white !important;
-}
-
-.navbar-white {
-  background-color: rgba(255, 255, 255, 0.925);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-white .nav-link,
@@ -55,32 +50,17 @@ h1, h2, h3, h4, h5, h6 , p, a{
   z-index: 10;
 }
 
-
-#image-section {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-image: url('./assets/cowCover2.png');
-  background-size: cover;
-  background-position: center 0;
-  top : -20;
-  background-repeat: no-repeat;
-}
-
 .hero-section {
   position: relative;
   height: 100vh;
   overflow: hidden;
-}
-
-.hero-section {
-  content: "";
-  position: relative;
-  top: 0; left: 0; right: 0; bottom: 0;
   background-image: url('/src/assets/Background1.png');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center 0;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
   z-index: 1;
 }
 
@@ -88,15 +68,6 @@ h1, h2, h3, h4, h5, h6 , p, a{
   position: relative;
   z-index: 2;
   color: white;
-}
-
-
-.hero-section::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.0);
-  z-index: 1;
 }
 
 .glass-btn {
@@ -145,4 +116,48 @@ h1, h2, h3, h4, h5, h6 , p, a{
   to {
     transform: rotate(360deg);
   }
+}
+
+.parallax-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.parallax-overlay {
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.parallax-title {
+  font-size: 3rem;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.parallax-subtitle {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.zoom-animate {
+  animation: zoomIn 10s ease-in-out infinite alternate;
 }
