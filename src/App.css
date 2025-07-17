@@ -16,6 +16,55 @@ section {
   scroll-margin-top: 56px;
 }
 
+/* Mobile navbar dropdown */
+.navbar-collapse {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 100%;
+  max-width: 250px;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.navbar-collapse.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.navbar-collapse .nav-link {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animate nav links */
+.navbar-collapse.show .nav-link:nth-child(1) {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.navbar-collapse.show .nav-link:nth-child(2) {
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.navbar-collapse.show .nav-link:nth-child(3) {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Navbar styling */
 .navbar {
   position: fixed;
@@ -150,55 +199,6 @@ section {
 }
 .hamburger.open span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
-}
-
-/* Mobile navbar dropdown */
-.navbar-collapse {
-  position: absolute;
-  top: 56px;
-  right: 0;
-  width: 100%;
-  max-width: 250px;
-  height: fit-content;
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.3s ease;
-  z-index: 1000;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.navbar-collapse.show {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.navbar-collapse .nav-link {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.3s ease-in-out;
-}
-
-/* Animate nav links */
-.navbar-collapse.show .nav-link:nth-child(1) {
-  transition-delay: 0.1s;
-  opacity: 1;
-  transform: translateX(0);
-}
-.navbar-collapse.show .nav-link:nth-child(2) {
-  transition-delay: 0.2s;
-  opacity: 1;
-  transform: translateX(0);
-}
-.navbar-collapse.show .nav-link:nth-child(3) {
-  transition-delay: 0.3s;
-  opacity: 1;
-  transform: translateX(0);
 }
 
 /* Parallax sections */
