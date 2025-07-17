@@ -8,24 +8,31 @@ body, html {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, button {
+  font-family: 'Poppins', sans-serif;
+}
+
 section {
   scroll-margin-top: 56px;
 }
 
-.navbar-transparent {
-  background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  color: white;
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
-.solution-bg {
-  background-color: #f8f9fa;
+.navbar-transparent {
+  background-color: transparent;
+  color: white;
 }
 
 .navbar-white {
   background-color: rgba(255, 255, 255, 0.925);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar .container-fluid {
@@ -40,21 +47,15 @@ section {
 
 .navbar-white .nav-link,
 .navbar-white .navbar-brand {
-  color: #333 !important;
+  color: #000000 !important;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
+/* Hero section with parallax */
 .hero-section {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background-image: url('/src/assets/Background1.png');
+  background-image: url('/src/assets/Background1.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0;
@@ -64,60 +65,143 @@ section {
   z-index: 1;
 }
 
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .hero-section .container {
   position: relative;
   z-index: 2;
   color: white;
 }
 
+/* Buttons */
 .glass-btn {
   display: inline-block;
-  padding: 6px 15px;
+  padding: 6px 12px;
+  border: none;
+  background: none;
+  color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .glass-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Hamburger styling */
+.hamburger {
+  width: 30px;
+  height: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hamburger bars */
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Color logic for hamburger */
+
+/* Top of page - white */
+.hamburger:not(.scrolled):not(.open) span {
+  background-color: #fff;
 }
 
+/* Scrolled but not open - black */
+.hamburger.scrolled:not(.open) span {
+  background-color: #000;
+}
+
+/* Open at top - white ✖ */
+.hamburger.open:not(.scrolled) span {
+  background-color: #fff;
+}
+
+/* Open and scrolled - black ✖ */
+.hamburger.open.scrolled span {
+  background-color: #000000;
+}
+
+/* Hamburger animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Mobile navbar dropdown */
+.navbar-collapse {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 100%;
+  max-width: 250px;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.navbar-collapse.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.navbar-collapse .nav-link {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animate nav links */
+.navbar-collapse.show .nav-link:nth-child(1) {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.navbar-collapse.show .nav-link:nth-child(2) {
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.navbar-collapse.show .nav-link:nth-child(3) {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Parallax sections */
 .parallax-section {
   height: 100vh;
   position: relative;
@@ -149,15 +233,69 @@ section {
   font-weight: 100;
 }
 
+/* Optional parallax zoom animation */
 @keyframes zoomIn {
-  0% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1.5);
-  }
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.5); }
 }
 
 .zoom-animate {
   animation: zoomIn 10s ease-in-out infinite alternate;
+}
+
+/* Problem section */
+.problem-section {
+  height: 100vh;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* App logo and extras */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#solution {
+  height: 100vh;
+  background-color: #eeeeee;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
 }

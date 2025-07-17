@@ -1,6 +1,6 @@
 function Problem() {
   return (
-    <section id="problem" className="py-5" data-aos="fade-up" data-aos-delay="100">
+    <section id="problem" className="py-5 problem-section" data-aos="zoom-out" data-aos-delay="100">
       <div className="container text-center ">
         <i className="fas fa-question-circle fa-8x mb-5"  style={{ color: '#336699' }}></i>
         <h2 className="mb-5 display-3">Why We Do This?</h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../assets/HeroBanner.png';
+import bannerImage from '../assets/HeroBanner.webp';
 import '../App.css';
 
 function Aim() {
@@ -37,8 +37,8 @@ function Aim() {
       padding: '20vh 5vw',
     }}
   >
-    <h1 className="parallax-title mb-5">Helping Farmers with Simple Technology</h1>
-    <p className="parallax-subtitle">
+    <h1 className="parallax-title mb-5" data-aos="zoom-out" data-aos-offset="-300">Helping Farmers with Simple Technology</h1>
+    <p className="parallax-subtitle" data-aos="zoom-out" data-aos-offset="-300" data-aos-delay="200">
       This project is about making a cheap, solar-powered collar for cows. It helps farmers see where
       their animals are and check if they are moving normally. The collar charges using sunlight, so there's no need to change
       batteries.

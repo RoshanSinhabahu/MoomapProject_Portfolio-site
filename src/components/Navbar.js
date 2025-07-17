@@ -3,7 +3,7 @@ import '../App.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // 🟢 Toggle for menu open
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,23 +24,28 @@ function Navbar() {
         <a className="navbar-brand" href="#home">MooMap</a>
 
         {/* Hamburger Button */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={toggleMenu}
-          aria-controls="navbarNav"
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <div
+            className={`hamburger d-lg-none ${isOpen ? 'open' : ''}${scrolled ? 'scrolled' : ''}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
         {/* Collapsible Menu */}
-        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
-          <div className="navbar-nav ms-auto text-center">
-            <a className="nav-link glass-btn mx-3" href="#problem" onClick={() => setIsOpen(false)}>Challenge</a>
-            <a className="nav-link glass-btn mx-3" href="#technology" onClick={() => setIsOpen(false)}>Technology</a>
-            <a className="nav-link glass-btn mx-3" href="#aim" onClick={() => setIsOpen(false)}>Target</a>
+        <div className="d-none d-lg-flex ms-auto">
+          <a className="nav-link glass-btn mx-4" href="#problem">Challenge</a>
+          <a className="nav-link glass-btn mx-4" href="#technology">Technology</a>
+          <a className="nav-link glass-btn mx-4" href="#aim">Target</a>
+        </div>
+
+{/* Mobile nav (hamburger dropdown) */}
+        <div className={`navbar-collapse d-lg-none ${isOpen ? 'show' : ''}`} id="navbarNav">
+          <div className="navbar-nav text-center">
+            <a className="nav-link glass-btn" href="#problem" onClick={() => setIsOpen(false)}>Challenge</a>
+            <a className="nav-link glass-btn" href="#technology" onClick={() => setIsOpen(false)}>Technology</a>
+            <a className="nav-link glass-btn" href="#aim" onClick={() => setIsOpen(false)}>Target</a>
           </div>
         </div>
       </div>
