@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Problem from './components/Problem';
 import Solution from './components/Solution';
 import Aim from './components/Aim';
+import StatsSection from './components/StatsSection';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
@@ -25,6 +26,7 @@ function App() {
       <Problem />
       <Solution />
       <Aim />
+      <StatsSection />
       <Footer />
     </>
   );

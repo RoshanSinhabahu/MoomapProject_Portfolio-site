@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -211,6 +215,15 @@ section {
   z-index: 1;
 }
 
+.parallax-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
 .parallax-overlay {
   position: absolute;
   width: 75%;
@@ -288,9 +301,9 @@ section {
   to { transform: rotate(360deg); }
 }
 
-#solution {
-  height: 100vh;
-  background-color: #eeeeee;
+.solution-bg {
+  height: 90vh;
+  background-color: #f8f9fa;
   text-align: center;
   position: relative;
   display: flex;
@@ -298,4 +311,91 @@ section {
   justify-content: center;
   flex-direction: column;
   padding: 20px;
+}
+
+.stats-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.stats-container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 250px;
+}
+
+.stat-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  color: #336699;
+  margin-bottom: 12px;
+}
+
+.stat-value {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stat-label {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #9e9e9e;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    height: auto;
+    margin: 20px;
+    gap: 10px;
+    flex-direction: column; /* stack items vertically if needed */
+  }
+
+  .solution-bg {
+    height: 130vh;
+  }
+
+  .problem-section {
+    margin-top: 50px;
+    height: 90vh;
+  }
+
+  .stat-tile {
+    margin: 20px 0;
+  }
+
+  .parallax-section{
+    height: 100vh;
+  }
+
+  .parallax-section h1 {
+    font-size: 2.5rem;
+    padding-bottom: -10px;
+  }
+
+  .parallax-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .limitation-section{
+    height: 65vh;
+  }
+  
+  .loraInfo-section{
+    height: 60vh;
+  }
 }
