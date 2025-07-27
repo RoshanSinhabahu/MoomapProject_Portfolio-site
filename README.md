@@ -8,7 +8,7 @@
 ---
 
 ## 🌐 Live Demo
-👉 **Visit the website**: [https://moomap-project.netlify.app](https://moomap-project.netlify.app)
+👉 **Visit the website**: https://moomap.vercel.app/
 
 ---
 
