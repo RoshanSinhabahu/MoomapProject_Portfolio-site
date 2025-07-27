@@ -51,7 +51,7 @@ function Navbar() {
         {/* Desktop Nav */}
         <div className="d-none d-lg-flex ms-auto">
           <a className="nav-link glass-btn mx-4" href="#problem">Challenge</a>
-          <a className="nav-link glass-btn mx-4" href="#technology">Technology</a>
+          <a className="nav-link glass-btn mx-4" href="#solution">Technology</a>
           <a className="nav-link glass-btn mx-4" href="#aim">Target</a>
         </div>
 
@@ -63,7 +63,7 @@ function Navbar() {
         >
           <div className="navbar-nav text-center">
             <a className="nav-link glass-btn" href="#problem" onClick={() => setIsOpen(false)}>Challenge</a>
-            <a className="nav-link glass-btn" href="#technology" onClick={() => setIsOpen(false)}>Technology</a>
+            <a className="nav-link glass-btn" href="#solution" onClick={() => setIsOpen(false)}>Technology</a>
             <a className="nav-link glass-btn" href="#aim" onClick={() => setIsOpen(false)}>Target</a>
           </div>
         </div>

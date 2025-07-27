@@ -10,7 +10,7 @@ function StatsSection() {
   const stats = [
     {
       id: 1,
-      icon: <FaUsers size={80} className="icon" />,
+      icon: <FaUsers size={90} className="icon" />,
       label: "Registered Users",
       value: 125,
     },
@@ -22,7 +22,7 @@ function StatsSection() {
     },
     {
       id: 3,
-      icon: <FaNetworkWired size={70} className="icon" />,
+      icon: <FaNetworkWired size={90} className="icon" />,
       label: "Gateways Online",
       value: 12,
     },
@@ -78,7 +78,7 @@ function StatsSection() {
           <div key={item.id} className="stat-tile" data-aos="fade-up" data-aos-delay={index * 100}>
             {item.icon}
             <h2 className="stat-value">{displayedValues[index]}</h2>
-            <p className="stat-label " data-aos="fade-up" data-aos-delay="100">{item.label}</p>
+            <p className="stat-label " data-aos="fade-up" data-aos-offset="-200">{item.label}</p>
           </div>
         ))}
       </div>
