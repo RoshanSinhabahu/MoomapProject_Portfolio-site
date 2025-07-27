@@ -351,7 +351,7 @@ section {
   color: #9e9e9e;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .stats-container {
     gap: 60px;
   }

@@ -1,2 +1,1 @@
-[build]
-  command = "set CI=false && npm run build"
+CI=false && npm run build
