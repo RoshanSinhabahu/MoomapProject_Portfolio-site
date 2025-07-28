@@ -75,10 +75,10 @@ function StatsSection() {
     <section className="stats-section" id="stats" ref={sectionRef}>
       <div className="stats-container">
         {stats.map((item, index) => (
-          <div key={item.id} className="stat-tile" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div key={item.id} className="stat-tile" data-aos="fade-up" >
             {item.icon}
             <h2 className="stat-value">{displayedValues[index]}</h2>
-            <p className="stat-label " data-aos="fade-up" data-aos-offset="-200">{item.label}</p>
+            <p className="stat-label " data-aos="fade-up">{item.label}</p>
           </div>
         ))}
       </div>
