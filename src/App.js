@@ -11,6 +11,40 @@ import { useEffect } from 'react';
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+// ==== Manrope (100 to 900) ====
+import '@fontsource/manrope/200.css';
+import '@fontsource/manrope/300.css';
+import '@fontsource/manrope/400.css';
+import '@fontsource/manrope/500.css';
+import '@fontsource/manrope/600.css';
+import '@fontsource/manrope/700.css';
+import '@fontsource/manrope/800.css';
+
+// ==== Raleway (100 to 900) ====
+import '@fontsource/raleway/100.css';
+import '@fontsource/raleway/200.css';
+import '@fontsource/raleway/300.css';
+import '@fontsource/raleway/400.css';
+import '@fontsource/raleway/500.css';
+import '@fontsource/raleway/600.css';
+import '@fontsource/raleway/700.css';
+import '@fontsource/raleway/800.css';
+import '@fontsource/raleway/900.css';
+
+// ==== Saira (100 to 900) ====
+import '@fontsource/saira/100.css';
+import '@fontsource/saira/200.css';
+import '@fontsource/saira/300.css';
+import '@fontsource/saira/400.css';
+import '@fontsource/saira/500.css';
+import '@fontsource/saira/600.css';
+import '@fontsource/saira/700.css';
+import '@fontsource/saira/800.css';
+import '@fontsource/saira/900.css';
+
+
+
+
 
 function App() {
   useEffect(() => {

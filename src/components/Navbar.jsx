@@ -36,7 +36,7 @@ function Navbar() {
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'navbar-white' : 'navbar-transparent'}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#home">MooMap</a>
+        <a className="navbar-brand fw-semibold" href="#home">MooMap</a>
 
         {/* Hamburger Button */}
         <div

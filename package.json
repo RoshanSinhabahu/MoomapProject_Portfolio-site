@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/manrope": "^5.2.6",
+    "@fontsource/raleway": "^5.2.6",
+    "@fontsource/saira": "^5.2.8",
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,6 +17,7 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
+    "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
