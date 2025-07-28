@@ -3,7 +3,7 @@
 - Built a responsive single-page portfolio using **React**
 - Implemented scroll animations, parallax effects, and smooth section navigation
 - Styled with **CSS3**, **Bootstrap**, and custom components
-- Deployed the project to **Netlify** for public access
+- Deployed the project to **Vercel** for public access
 
 ---
 
