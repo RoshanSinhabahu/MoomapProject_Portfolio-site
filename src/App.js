@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 function App() {
