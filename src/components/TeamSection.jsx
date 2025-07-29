@@ -38,7 +38,7 @@ const teamMembers = [
 
 function TeamSection() {
   return (
-    <section className="team-section">
+    <section id="Team-Section" className="team-section">
       <h2 className="section-title">The Minds Behind the Mission</h2>
       <div className="carousel">
         <div className="carousel-track">

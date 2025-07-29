@@ -53,6 +53,7 @@ function Navbar() {
           <a className="nav-link glass-btn mx-4" href="#problem">Challenge</a>
           <a className="nav-link glass-btn mx-4" href="#solution">Technology</a>
           <a className="nav-link glass-btn mx-4" href="#aim">Target</a>
+          <a className="nav-link glass-btn mx-4" href="#Team-Section">Squad</a>
         </div>
 
         {/* Mobile Nav */}
@@ -65,6 +66,7 @@ function Navbar() {
             <a className="nav-link glass-btn" href="#problem" onClick={() => setIsOpen(false)}>Challenge</a>
             <a className="nav-link glass-btn" href="#solution" onClick={() => setIsOpen(false)}>Technology</a>
             <a className="nav-link glass-btn" href="#aim" onClick={() => setIsOpen(false)}>Target</a>
+            <a className="nav-link glass-btn" href="#Team-Section" onClick={() => setIsOpen(false)}>Squad</a>
           </div>
         </div>
       </div>
