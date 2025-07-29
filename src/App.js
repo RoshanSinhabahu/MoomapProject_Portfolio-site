@@ -5,11 +5,15 @@ import Problem from './components/Problem';
 import Solution from './components/Solution';
 import Aim from './components/Aim';
 import StatsSection from './components/StatsSection';
+import TeamSection from './components/TeamSection';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import './App.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 // ==== Manrope (100 to 900) ====
 import '@fontsource/manrope/200.css';
@@ -62,6 +66,7 @@ function App() {
       <Solution />
       <Aim />
       <StatsSection />
+      <TeamSection />
       <Footer />
     </>
   );

@@ -17,6 +17,8 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },

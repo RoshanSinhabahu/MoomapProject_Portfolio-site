@@ -306,7 +306,7 @@ section {
   position: relative;
   z-index: 1;
   height: 90vh;
-  background-color: #f8f9fa;
+  background-color: #f3f9ff;
   text-align: center;
   display: flex;
   align-items: center;
@@ -443,6 +443,106 @@ section {
   font-weight: 400;
 }
 
+/*===============Team Section========== */
+
+.team-section {
+  text-align: center;
+  background-color: #eef7ff;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Important to hide overflow */
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 100px;
+  color: #24476b;
+}
+
+/* NEW: Carousel structure */
+.carousel {
+  width: 100%;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 5rem;
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+}
+
+.carousel-track.dragging {
+  animation-play-state: paused;
+  cursor: grabbing;
+}
+
+/* Your original team member styles */
+.team-member {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: 200px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.team-member:hover {
+
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+
+.team-member:hover .member-name {
+  transform: scale(1.25);
+  transition: ease 0.3s;
+  color: #295077;
+}
+
+.profile-image-wrapper {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto 15px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #222;
+  transition: ease 0.3s;
+}
+
+.member-role {
+  font-size: 0.9rem;
+  color: #777;
+  margin: -3px;
+}
+
+/* NEW: Scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 1000px) {
   .stats-container {
     gap: 60px;
@@ -458,7 +558,7 @@ section {
   }
 
   .solution-bg {
-    height: 130vh;
+    height: 110vh;
   }
 
   .problem-section {
@@ -484,11 +584,11 @@ section {
   }
 
   .limitation-section{
-    height: 65vh;
+    height: 50vh;
   }
   
   .loraInfo-section{
-    height: 60vh;
+    height: 50vh;
   }
 
   .footer-container {
