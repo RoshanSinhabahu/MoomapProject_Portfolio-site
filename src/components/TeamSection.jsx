@@ -90,9 +90,9 @@ function TeamSection() {
   return (
     <section id="Team-Section" className="team-section">
       <div className="container">
-        <h2 className="section-title">The Minds Behind the Mission</h2>
+        <h2 className="section-title" data-aos="zoom-out">The Minds Behind the Mission</h2>
 
-        <div className="carousel-wrapper">
+        <div className="carousel-wrapper" data-aos="zoom-out-left" data-aos-delay="200">
           <div
             ref={carouselRef}
             className="carousel"

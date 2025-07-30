@@ -20,8 +20,8 @@ function Hero() {
       className="hero-section d-flex align-items-center justify-content-center text-white"
     >
       <div className="container text-center">
-        <div className="header-text">Intelligent Cattle Monitoring System</div>
-        <div className="caption-text">A smarter way to track, protect, and manage your cattle.</div>
+        <div className="header-text" data-aos="zoom-out">Intelligent Cattle Monitoring System</div>
+        <div className="caption-text" data-aos="zoom-out" data-aos-delay="300">A smarter way to track, protect, and manage your cattle.</div>
       </div>
     </header>
   );
