@@ -40,7 +40,7 @@ function Navbar() {
 
         {/* Hamburger Button */}
         <div
-          className={`hamburger d-lg-none ${isOpen ? 'open' : ''}${scrolled ? ' scrolled' : ''}`}
+          className={`hamburger d-lg-none${isOpen ? ' open' : ''} ${scrolled ? 'scrolled' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           <span></span>
