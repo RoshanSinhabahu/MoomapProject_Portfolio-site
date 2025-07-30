@@ -659,6 +659,7 @@ section {
   }
   
   .loraInfo-section{
+    padding-top: 1rem;
     height: 50vh;
   }
 
