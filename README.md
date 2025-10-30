@@ -1,3 +1,4 @@
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 ## 🧩 What I Did
 
 - Built a responsive single-page portfolio using **React**
@@ -26,4 +27,6 @@ _Feel free to fork this repository and make improvements. Pull requests are alwa
 
 ### 📄 License
 
-_This project is licensed under the **MIT License** 📝_
+_This project is licensed under the_
+
+
