@@ -5,9 +5,10 @@ const teamMembers = [
   { name: 'Shashika', role: 'APP Developer', image: '/Team/Sashika.jpeg' },
   { name: 'Roshan', role: 'Frontend Developer', image: '/Team/Roshan.jpeg' },
   { name: 'Imalka', role: 'Backend Developer', image: '/Team/Imalka.jpeg' },
-  { name: 'Naduni', role: 'Documentation Specialist', image: '/Team/Naduni.jpeg' },
   { name: 'Yohan', role: 'Database Administrator', image: '/Team/Yohan.jpeg' },
+    { name: 'Thiwanka', role: 'Backend Developer', image: '/Team/Jaya.jpg' },
   { name: 'Chrishen', role: 'UI/UX Designer', image: '/Team/Chrishen.jpeg' },
+  { name: 'Naduni', role: 'Documentation Specialist', image: '/Team/Naduni.jpeg' },
 ];
 
 function TeamSection() {
