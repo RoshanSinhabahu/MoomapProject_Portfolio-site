@@ -6,7 +6,7 @@ const teamMembers = [
   { name: 'Roshan', role: 'Frontend Developer', image: '/Team/Roshan.jpeg' },
   { name: 'Imalka', role: 'Backend Developer', image: '/Team/Imalka.jpeg' },
   { name: 'Yohan', role: 'Database Administrator', image: '/Team/Yohan.jpeg' },
-    { name: 'Thiwanka', role: 'Backend Developer', image: '/Team/Jaya.jpg' },
+    { name: 'Thiwanka', role: 'Backend Developer', image: '/Team/Jaya.jpeg' },
   { name: 'Chrishen', role: 'UI/UX Designer', image: '/Team/Chrishen.jpeg' },
   { name: 'Naduni', role: 'Documentation Specialist', image: '/Team/Naduni.jpeg' },
 ];
