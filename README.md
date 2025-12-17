@@ -27,6 +27,6 @@ _Feel free to fork this repository and make improvements. Pull requests are alwa
 
 ### 📄 License
 
-_This project is licensed under the_
+_This project is licensed under the MIT license_
 
 
